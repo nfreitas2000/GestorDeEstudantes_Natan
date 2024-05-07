@@ -16,7 +16,7 @@ namespace GestorDeEstudantes_Natan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SGA());
+            Application.Run(new FormLogin());
         }
     }
 }

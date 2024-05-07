@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace GestorDeEstudantes_Natan
 {
-    public partial class SGA : Form
+    public partial class FormLogin : Form
     {
-        public SGA()
+        public FormLogin()
         {
             InitializeComponent();
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
         {
 
         }
