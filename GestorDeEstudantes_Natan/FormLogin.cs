@@ -44,7 +44,7 @@ namespace GestorDeEstudantes_Natan
 
             MySqlDataAdapter meuAdaptadorSql = new MySqlDataAdapter();
             DataTable minhaTabela = new DataTable();
-            MySqlCommand meuComandoSql = new MySqlCommand("SELECT * FROM `usuarios` WHERE 'nome_de_usuario'= @usuario and 'senha' = @senha", meuBancoDeDados.getConexao);
+            MySqlCommand meuComandoSql = new MySqlCommand("SELECT * FROM `usuarios` WHERE `nome_de_usuario`= @usuario and `Senha` = @senha", meuBancoDeDados.getConexao);
 
             meuComandoSql.Parameters.Add("@usuario", MySqlDbType.VarChar).Value = textBoxUsuario.Text;
             meuComandoSql.Parameters.Add("@senha", MySqlDbType.VarChar).Value = textBoxSenha.Text;
