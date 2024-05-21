@@ -16,7 +16,17 @@ namespace GestorDeEstudantes_Natan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLogin());
+            //Application.Run(new FormLogin());
+
+            FormLogin loginForm = new FormLogin();
+            if (loginForm.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new FormMenuPrincipal());
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
     }
 }
