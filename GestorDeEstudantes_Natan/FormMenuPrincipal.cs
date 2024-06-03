@@ -16,5 +16,11 @@ namespace GestorDeEstudantes_Natan
         {
             InitializeComponent();
         }
+
+        private void cadastrarAlunoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormInserirEstudantes inserirEstudantes = new FormInserirEstudantes();
+            inserirEstudantes.Show();
+        }
     }
 }

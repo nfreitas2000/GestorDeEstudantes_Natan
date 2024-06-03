@@ -41,5 +41,26 @@ namespace GestorDeEstudantes_Natan
         {
 
         }
+
+        private void buttonFoto_Click(object sender, EventArgs e)
+        {
+            //Exibe uma janela para procurar a imagem
+
+            OpenFileDialog selecionarImagem = new OpenFileDialog();
+
+            selecionarImagem.Filter = "Selecione a foto (*.jpg; *.png; *.git)|*.jpg; *.png; *.git";
+
+            selecionarImagem.ShowDialog();
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

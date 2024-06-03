@@ -245,6 +245,7 @@
             this.buttonCancelar.TabIndex = 9;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonLogin
             // 
@@ -256,6 +257,7 @@
             this.buttonLogin.TabIndex = 8;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // buttonFoto
             // 
@@ -265,8 +267,9 @@
             this.buttonFoto.Name = "buttonFoto";
             this.buttonFoto.Size = new System.Drawing.Size(124, 38);
             this.buttonFoto.TabIndex = 10;
-            this.buttonFoto.Text = "Login";
+            this.buttonFoto.Text = "Enviar";
             this.buttonFoto.UseVisualStyleBackColor = true;
+            this.buttonFoto.Click += new System.EventHandler(this.buttonFoto_Click);
             // 
             // FormInserirEstudantes
             // 
