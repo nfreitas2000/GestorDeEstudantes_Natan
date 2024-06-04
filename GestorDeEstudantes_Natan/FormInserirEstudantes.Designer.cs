@@ -46,7 +46,7 @@
             this.textBoxEndereco = new System.Windows.Forms.TextBox();
             this.pictureBoxUsuario = new System.Windows.Forms.PictureBox();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            this.buttonLogin = new System.Windows.Forms.Button();
+            this.buttonCadastrar = new System.Windows.Forms.Button();
             this.buttonFoto = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBoxGenero.SuspendLayout();
@@ -247,17 +247,17 @@
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
-            // buttonLogin
+            // buttonCadastrar
             // 
-            this.buttonLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.Location = new System.Drawing.Point(26, 500);
-            this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(119, 38);
-            this.buttonLogin.TabIndex = 8;
-            this.buttonLogin.Text = "Login";
-            this.buttonLogin.UseVisualStyleBackColor = true;
-            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
+            this.buttonCadastrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCadastrar.Location = new System.Drawing.Point(26, 500);
+            this.buttonCadastrar.Name = "buttonCadastrar";
+            this.buttonCadastrar.Size = new System.Drawing.Size(119, 38);
+            this.buttonCadastrar.TabIndex = 8;
+            this.buttonCadastrar.Text = "Cadastrar";
+            this.buttonCadastrar.UseVisualStyleBackColor = true;
+            this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
             // 
             // buttonFoto
             // 
@@ -278,7 +278,7 @@
             this.ClientSize = new System.Drawing.Size(322, 550);
             this.Controls.Add(this.buttonFoto);
             this.Controls.Add(this.buttonCancelar);
-            this.Controls.Add(this.buttonLogin);
+            this.Controls.Add(this.buttonCadastrar);
             this.Controls.Add(this.pictureBoxUsuario);
             this.Controls.Add(this.textBoxEndereco);
             this.Controls.Add(this.textBoxTelefone);
@@ -318,7 +318,7 @@
         private System.Windows.Forms.TextBox textBoxEndereco;
         private System.Windows.Forms.PictureBox pictureBoxUsuario;
         private System.Windows.Forms.Button buttonCancelar;
-        private System.Windows.Forms.Button buttonLogin;
+        private System.Windows.Forms.Button buttonCadastrar;
         private System.Windows.Forms.Button buttonFoto;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mysqlx;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,6 +52,12 @@ namespace GestorDeEstudantes_Natan
             selecionarImagem.Filter = "Selecione a foto (*.jpg; *.png; *.git)|*.jpg; *.png; *.git";
 
             selecionarImagem.ShowDialog();
+
+            if (selecionarImagem.ShowDialog() == DialogResult.OK)
+            {
+                pictureBoxUsuario.Image = Image.FromFile(selecionarImagem.FileName);
+            }
+             
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
@@ -58,9 +65,33 @@ namespace GestorDeEstudantes_Natan
             Close();
         }
 
-        private void buttonLogin_Click(object sender, EventArgs e)
+        bool Verificar()
         {
+            if ((textBoxNome.Text.Trim() == "") ||
+                (textBoxSobrenome.Text.Trim() == "") ||
+                (textBoxTelefone.Text.Trim() == "") ||
+                (textBoxEndereco.Text.Trim() == "") ||
+                (pictureBoxUsuario.Image == null))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
 
+        private void buttonCadastrar_Click(object sender, EventArgs e)
+        {
+            //Cria um estudante.
+            Estudante estudante = new Estudante();
+            //Variáveis auxiliares
+            string nome = textBoxNome.Text;
+            string sobrenome = textBoxSobrenome.Text;
+            DateTime nascimento = dateTimePickerNascimento.Value;
+            string telefone = textBoxTelefone.Text;
+            string endereco = textBoxEndereco.Text;
+            string genero = "feminino";
         }
     }
 }
