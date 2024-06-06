@@ -162,6 +162,7 @@
             // radioButtonFem
             // 
             this.radioButtonFem.AutoSize = true;
+            this.radioButtonFem.Checked = true;
             this.radioButtonFem.Location = new System.Drawing.Point(114, 28);
             this.radioButtonFem.Name = "radioButtonFem";
             this.radioButtonFem.Size = new System.Drawing.Size(67, 17);
@@ -178,7 +179,6 @@
             this.radioButtonMasc.Name = "radioButtonMasc";
             this.radioButtonMasc.Size = new System.Drawing.Size(73, 17);
             this.radioButtonMasc.TabIndex = 0;
-            this.radioButtonMasc.TabStop = true;
             this.radioButtonMasc.Text = "Masculino";
             this.radioButtonMasc.UseVisualStyleBackColor = true;
             this.radioButtonMasc.CheckedChanged += new System.EventHandler(this.radioButtonMasc_CheckedChanged);
