@@ -129,6 +129,7 @@
             // dateTimePickerNascimento
             // 
             this.dateTimePickerNascimento.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePickerNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerNascimento.Location = new System.Drawing.Point(135, 125);
             this.dateTimePickerNascimento.Name = "dateTimePickerNascimento";
             this.dateTimePickerNascimento.Size = new System.Drawing.Size(158, 20);
@@ -288,7 +289,7 @@
             this.Controls.Add(this.labelGenero);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormInserirEstudantes";
-            this.Text = "FormInserirEstudantes";
+            this.Text = "Novo Cadastro";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.groupBoxGenero.ResumeLayout(false);

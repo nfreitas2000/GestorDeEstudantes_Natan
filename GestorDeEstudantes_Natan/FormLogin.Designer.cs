@@ -94,6 +94,7 @@
             this.textBoxSenha.Name = "textBoxSenha";
             this.textBoxSenha.Size = new System.Drawing.Size(211, 31);
             this.textBoxSenha.TabIndex = 3;
+            this.textBoxSenha.UseSystemPasswordChar = true;
             // 
             // labelUser
             // 

@@ -124,7 +124,8 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMenuPrincipal";
-            this.Text = "FormMenuPrincipal";
+            this.Text = "SGA - Menu Principal";
+            this.Load += new System.EventHandler(this.FormMenuPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

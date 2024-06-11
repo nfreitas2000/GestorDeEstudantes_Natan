@@ -22,5 +22,10 @@ namespace GestorDeEstudantes_Natan
             FormInserirEstudantes inserirEstudantes = new FormInserirEstudantes();
             inserirEstudantes.Show();
         }
+
+        private void FormMenuPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
