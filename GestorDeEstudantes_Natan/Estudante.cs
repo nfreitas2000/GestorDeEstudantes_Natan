@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -39,6 +40,19 @@ namespace GestorDeEstudantes_Natan
 
 
         }
+
+        public DataTable pegarEstudantes(MySqlCommand comando)
+        {
+            comando.Connection = meuBancoDeDados.getConexao;
+
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+
+            DataTable tabela = new DataTable();
+            adaptador.Fill(tabela);
+
+            return tabela;
+        }
+    
 
     }
 }

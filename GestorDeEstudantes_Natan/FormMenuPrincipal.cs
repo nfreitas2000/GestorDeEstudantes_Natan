@@ -27,5 +27,11 @@ namespace GestorDeEstudantes_Natan
         {
 
         }
+
+        private void listaAlunosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormListaDeEstudantes listaDeEstudantes = new FormListaDeEstudantes();
+            listaDeEstudantes.Show();
+        }
     }
 }
