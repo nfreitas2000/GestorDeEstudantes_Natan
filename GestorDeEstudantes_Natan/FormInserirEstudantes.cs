@@ -134,5 +134,30 @@ namespace GestorDeEstudantes_Natan
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxEndereco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxTelefone_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

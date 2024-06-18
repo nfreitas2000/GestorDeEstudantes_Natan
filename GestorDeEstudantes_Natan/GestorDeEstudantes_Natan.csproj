@@ -50,6 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Estudante.cs" />
+    <Compile Include="FormAtualizarApagarEstudantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAtualizarApagarEstudantes.Designer.cs">
+      <DependentUpon>FormAtualizarApagarEstudantes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormInserirEstudantes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     <Compile Include="MeuBancoDeDados.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAtualizarApagarEstudantes.resx">
+      <DependentUpon>FormAtualizarApagarEstudantes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormInserirEstudantes.resx">
       <DependentUpon>FormInserirEstudantes.cs</DependentUpon>
     </EmbeddedResource>

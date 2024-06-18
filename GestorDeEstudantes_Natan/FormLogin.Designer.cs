@@ -32,7 +32,6 @@
             this.labelAcessar = new System.Windows.Forms.Label();
             this.pictureBoxUsuario = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanelDados = new System.Windows.Forms.TableLayoutPanel();
-            this.textBoxSenha = new System.Windows.Forms.TextBox();
             this.labelUser = new System.Windows.Forms.Label();
             this.labelSenha = new System.Windows.Forms.Label();
             this.textBoxUsuario = new System.Windows.Forms.TextBox();
@@ -40,6 +39,7 @@
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.tableLayoutPanelAcessar = new System.Windows.Forms.TableLayoutPanel();
+            this.textBoxSenha = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsuario)).BeginInit();
             this.tableLayoutPanelDados.SuspendLayout();
             this.tableLayoutPanelBotoes.SuspendLayout();
@@ -73,10 +73,10 @@
             this.tableLayoutPanelDados.ColumnCount = 2;
             this.tableLayoutPanelDados.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.90604F));
             this.tableLayoutPanelDados.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.09396F));
-            this.tableLayoutPanelDados.Controls.Add(this.textBoxSenha, 1, 1);
             this.tableLayoutPanelDados.Controls.Add(this.labelUser, 0, 0);
             this.tableLayoutPanelDados.Controls.Add(this.labelSenha, 0, 1);
             this.tableLayoutPanelDados.Controls.Add(this.textBoxUsuario, 1, 0);
+            this.tableLayoutPanelDados.Controls.Add(this.textBoxSenha, 1, 1);
             this.tableLayoutPanelDados.Location = new System.Drawing.Point(12, 276);
             this.tableLayoutPanelDados.Name = "tableLayoutPanelDados";
             this.tableLayoutPanelDados.RowCount = 2;
@@ -84,17 +84,6 @@
             this.tableLayoutPanelDados.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelDados.Size = new System.Drawing.Size(338, 105);
             this.tableLayoutPanelDados.TabIndex = 2;
-            // 
-            // textBoxSenha
-            // 
-            this.textBoxSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSenha.Location = new System.Drawing.Point(124, 63);
-            this.textBoxSenha.Multiline = true;
-            this.textBoxSenha.Name = "textBoxSenha";
-            this.textBoxSenha.Size = new System.Drawing.Size(211, 31);
-            this.textBoxSenha.TabIndex = 3;
-            this.textBoxSenha.UseSystemPasswordChar = true;
             // 
             // labelUser
             // 
@@ -184,6 +173,17 @@
             this.tableLayoutPanelAcessar.Size = new System.Drawing.Size(200, 258);
             this.tableLayoutPanelAcessar.TabIndex = 4;
             // 
+            // textBoxSenha
+            // 
+            this.textBoxSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxSenha.Location = new System.Drawing.Point(124, 59);
+            this.textBoxSenha.Multiline = true;
+            this.textBoxSenha.Name = "textBoxSenha";
+            this.textBoxSenha.Size = new System.Drawing.Size(211, 39);
+            this.textBoxSenha.TabIndex = 5;
+            this.textBoxSenha.Text = "admin";
+            this.textBoxSenha.UseSystemPasswordChar = true;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,12 +212,12 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelDados;
         private System.Windows.Forms.Label labelUser;
         private System.Windows.Forms.Label labelSenha;
-        private System.Windows.Forms.TextBox textBoxSenha;
         private System.Windows.Forms.TextBox textBoxUsuario;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelBotoes;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelAcessar;
+        private System.Windows.Forms.TextBox textBoxSenha;
     }
 }
 

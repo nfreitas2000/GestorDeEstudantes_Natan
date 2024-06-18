@@ -65,7 +65,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.textBoxNome, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.dateTimePickerNascimento, 1, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 13);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -73,6 +73,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(297, 163);
             this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // textBoxSobrenome
             // 
@@ -140,7 +141,7 @@
             this.labelGenero.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelGenero.AutoSize = true;
             this.labelGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGenero.Location = new System.Drawing.Point(16, 203);
+            this.labelGenero.Location = new System.Drawing.Point(16, 192);
             this.labelGenero.Name = "labelGenero";
             this.labelGenero.Size = new System.Drawing.Size(83, 25);
             this.labelGenero.TabIndex = 1;
@@ -189,7 +190,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 257);
+            this.label1.Location = new System.Drawing.Point(21, 246);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 25);
             this.label1.TabIndex = 3;
@@ -202,45 +203,49 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(21, 293);
+            this.label3.Location = new System.Drawing.Point(21, 282);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "Endereço";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBoxTelefone
             // 
             this.textBoxTelefone.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxTelefone.Location = new System.Drawing.Point(135, 262);
+            this.textBoxTelefone.Location = new System.Drawing.Point(135, 251);
             this.textBoxTelefone.Name = "textBoxTelefone";
             this.textBoxTelefone.Size = new System.Drawing.Size(171, 20);
             this.textBoxTelefone.TabIndex = 6;
+            this.textBoxTelefone.TextChanged += new System.EventHandler(this.textBoxTelefone_TextChanged);
             // 
             // textBoxEndereco
             // 
             this.textBoxEndereco.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxEndereco.Location = new System.Drawing.Point(135, 299);
+            this.textBoxEndereco.Location = new System.Drawing.Point(135, 288);
             this.textBoxEndereco.Name = "textBoxEndereco";
             this.textBoxEndereco.Size = new System.Drawing.Size(171, 20);
             this.textBoxEndereco.TabIndex = 6;
+            this.textBoxEndereco.TextChanged += new System.EventHandler(this.textBoxEndereco_TextChanged);
             // 
             // pictureBoxUsuario
             // 
             this.pictureBoxUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxUsuario.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsuario.Image")));
-            this.pictureBoxUsuario.Location = new System.Drawing.Point(95, 334);
+            this.pictureBoxUsuario.Location = new System.Drawing.Point(95, 323);
             this.pictureBoxUsuario.Name = "pictureBoxUsuario";
             this.pictureBoxUsuario.Size = new System.Drawing.Size(124, 101);
             this.pictureBoxUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxUsuario.TabIndex = 7;
             this.pictureBoxUsuario.TabStop = false;
+            this.pictureBoxUsuario.Click += new System.EventHandler(this.pictureBoxUsuario_Click);
             // 
             // buttonCancelar
             // 
             this.buttonCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(187, 500);
+            this.buttonCancelar.Location = new System.Drawing.Point(187, 489);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(119, 38);
             this.buttonCancelar.TabIndex = 9;
@@ -252,7 +257,7 @@
             // 
             this.buttonCadastrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCadastrar.Location = new System.Drawing.Point(26, 500);
+            this.buttonCadastrar.Location = new System.Drawing.Point(26, 489);
             this.buttonCadastrar.Name = "buttonCadastrar";
             this.buttonCadastrar.Size = new System.Drawing.Size(119, 38);
             this.buttonCadastrar.TabIndex = 8;
@@ -264,7 +269,7 @@
             // 
             this.buttonFoto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonFoto.Location = new System.Drawing.Point(95, 441);
+            this.buttonFoto.Location = new System.Drawing.Point(95, 430);
             this.buttonFoto.Name = "buttonFoto";
             this.buttonFoto.Size = new System.Drawing.Size(124, 38);
             this.buttonFoto.TabIndex = 10;
@@ -276,7 +281,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(322, 550);
+            this.ClientSize = new System.Drawing.Size(322, 529);
             this.Controls.Add(this.buttonFoto);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonCadastrar);
