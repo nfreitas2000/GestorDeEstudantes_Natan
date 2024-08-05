@@ -91,6 +91,7 @@
             this.editarremoverAlunosToolStripMenuItem.Name = "editarremoverAlunosToolStripMenuItem";
             this.editarremoverAlunosToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.editarremoverAlunosToolStripMenuItem.Text = "Editar/remover alunos";
+            this.editarremoverAlunosToolStripMenuItem.Click += new System.EventHandler(this.editarremoverAlunosToolStripMenuItem_Click);
             // 
             // gerenciarToolStripMenuItem
             // 

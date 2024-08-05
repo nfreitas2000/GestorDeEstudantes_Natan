@@ -37,12 +37,19 @@ namespace GestorDeEstudantes_Natan
         {
             //Abre as informações do aluno selecionado em uma nova janela.
             FormAtualizarApagarEstudantes formAtualizarApagarEstudantes = new FormAtualizarApagarEstudantes();
+            formAtualizarApagarEstudantes.textBoxID.Text = dataGridViewListaDeEstudantes.CurrentRow.Cells[0].Value.ToString();
+            
             formAtualizarApagarEstudantes.Show();
         }
 
         private void buttonAtualizar_Click(object sender, EventArgs e)
         {
             //Atualiza a lista de Estudantes
+        }
+
+        private void dataGridViewListaDeEstudantes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

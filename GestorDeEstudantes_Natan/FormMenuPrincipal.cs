@@ -33,5 +33,11 @@ namespace GestorDeEstudantes_Natan
             FormListaDeEstudantes listaDeEstudantes = new FormListaDeEstudantes();
             listaDeEstudantes.Show();
         }
+
+        private void editarremoverAlunosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAtualizarApagarEstudantes formAtualizarApagarEstudantes = new FormAtualizarApagarEstudantes();
+            formAtualizarApagarEstudantes.Show();
+        }
     }
 }
