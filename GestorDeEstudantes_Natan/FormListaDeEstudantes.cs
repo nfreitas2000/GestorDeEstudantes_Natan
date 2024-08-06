@@ -38,7 +38,21 @@ namespace GestorDeEstudantes_Natan
             //Abre as informações do aluno selecionado em uma nova janela.
             FormAtualizarApagarEstudantes formAtualizarApagarEstudantes = new FormAtualizarApagarEstudantes();
             formAtualizarApagarEstudantes.textBoxID.Text = dataGridViewListaDeEstudantes.CurrentRow.Cells[0].Value.ToString();
-            
+            formAtualizarApagarEstudantes.textBoxNome.Text = dataGridViewListaDeEstudantes.CurrentRow.Cells[1].Value.ToString();
+            formAtualizarApagarEstudantes.textBoxSobrenome.Text = dataGridViewListaDeEstudantes.CurrentRow.Cells[2].Value.ToString();
+            formAtualizarApagarEstudantes.dateTimePickerNascimento.Value = (DateTime) dataGridViewListaDeEstudantes.CurrentRow.Cells[3].Value;
+            if (dataGridViewListaDeEstudantes.CurrentRow.Cells[4].Value.ToString() == "Masculino")
+            {
+                formAtualizarApagarEstudantes.radioButtonMasc.Checked = true;
+            }
+            else
+            {
+                formAtualizarApagarEstudantes.radioButtonFem.Checked = true;
+            }
+            formAtualizarApagarEstudantes.textBoxTelefone.Text = dataGridViewListaDeEstudantes.CurrentRow.Cells[5].Value.ToString();
+            formAtualizarApagarEstudantes.textBoxEndereco.Text = dataGridViewListaDeEstudantes.CurrentRow.Cells[6].Value.ToString();
+
+
             formAtualizarApagarEstudantes.Show();
         }
 

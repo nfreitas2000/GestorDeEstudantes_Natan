@@ -100,6 +100,7 @@
             this.pictureBoxUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxUsuario.TabIndex = 18;
             this.pictureBoxUsuario.TabStop = false;
+            this.pictureBoxUsuario.Click += new System.EventHandler(this.pictureBoxUsuario_Click);
             // 
             // textBoxEndereco
             // 
@@ -334,24 +335,24 @@
         private System.Windows.Forms.Button buttonFoto;
         private System.Windows.Forms.Button buttonApagar;
         private System.Windows.Forms.Button buttonSalvar;
-        private System.Windows.Forms.PictureBox pictureBoxUsuario;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBoxGenero;
-        private System.Windows.Forms.RadioButton radioButtonFem;
-        private System.Windows.Forms.RadioButton radioButtonMasc;
         private System.Windows.Forms.Label labelGenero;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label labelNome;
         private System.Windows.Forms.Label labelSobrenome;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePickerNascimento;
         private System.Windows.Forms.Label labelID;
         private System.Windows.Forms.Button buttonBuscar;
-        public System.Windows.Forms.TextBox textBoxEndereco;
-        public System.Windows.Forms.TextBox textBoxTelefone;
-        public System.Windows.Forms.TextBox textBoxSobrenome;
-        public System.Windows.Forms.TextBox textBoxNome;
-        public System.Windows.Forms.TextBox textBoxID;
+        internal System.Windows.Forms.DateTimePicker dateTimePickerNascimento;
+        internal System.Windows.Forms.TextBox textBoxEndereco;
+        internal System.Windows.Forms.TextBox textBoxTelefone;
+        internal System.Windows.Forms.TextBox textBoxSobrenome;
+        internal System.Windows.Forms.TextBox textBoxNome;
+        internal System.Windows.Forms.TextBox textBoxID;
+        internal System.Windows.Forms.RadioButton radioButtonFem;
+        internal System.Windows.Forms.RadioButton radioButtonMasc;
+        internal System.Windows.Forms.PictureBox pictureBoxUsuario;
     }
 }

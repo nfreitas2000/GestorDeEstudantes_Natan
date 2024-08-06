@@ -30,5 +30,10 @@ namespace GestorDeEstudantes_Natan
                 pictureBoxUsuario.Image = Image.FromFile(selecionarImagem.FileName);
             }
         }
+
+        private void pictureBoxUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
