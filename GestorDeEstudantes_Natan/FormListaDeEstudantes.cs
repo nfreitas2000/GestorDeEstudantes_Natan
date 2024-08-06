@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,6 +52,12 @@ namespace GestorDeEstudantes_Natan
             }
             formAtualizarApagarEstudantes.textBoxTelefone.Text = dataGridViewListaDeEstudantes.CurrentRow.Cells[5].Value.ToString();
             formAtualizarApagarEstudantes.textBoxEndereco.Text = dataGridViewListaDeEstudantes.CurrentRow.Cells[6].Value.ToString();
+
+            //foto do aluno
+            byte[] imagem;
+            imagem = (byte[]) dataGridViewListaDeEstudantes.CurrentRow.Cells[7].Value;
+            MemoryStream foto = new MemoryStream(imagem);
+            formAtualizarApagarEstudantes.pictureBoxUsuario.Image = Image.FromStream(foto);
 
 
             formAtualizarApagarEstudantes.Show();
