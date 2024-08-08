@@ -89,6 +89,7 @@
             this.buttonSalvar.TabIndex = 19;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // pictureBoxUsuario
             // 
