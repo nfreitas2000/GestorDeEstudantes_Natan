@@ -13,6 +13,9 @@ namespace GestorDeEstudantes_Natan
 {
     public partial class FormAtualizarApagarEstudantes : Form
     {
+       
+        Estudante estudante = new Estudante();
+
         public FormAtualizarApagarEstudantes()
         {
             InitializeComponent();
@@ -73,7 +76,7 @@ namespace GestorDeEstudantes_Natan
             {
                 pictureBoxUsuario.Image.Save(foto, pictureBoxUsuario.Image.RawFormat);
 
-                if (estudante.inserirEstudante(nome, sobrenome, nascimento, telefone, genero, endereco, foto))
+                if (estudante.atualizarEstudante(id, nome, sobrenome, nascimento, telefone, genero, endereco, foto))
                 {
                     MessageBox.Show("Novo aluno cadastro!", "Sucesso!",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -105,6 +108,26 @@ namespace GestorDeEstudantes_Natan
                 }
 
 
+            }
+        }
+
+        private void buttonApagar_Click(object sender, EventArgs e)
+        {
+            //Remover Estudante
+            int id = Convert.ToInt32(textBoxID.Text);
+            if (MessageBox.Show("Tem certeza que deseja apagar esse aluno?", "Apagar Aluno", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (estudante.apagarEstudante(id))
+                {
+                    MessageBox.Show("Estudante Removido!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    //Limpa as caixas de texto
+                    textBoxID.Text = "";
+                    textBoxNome.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Estudante não removido!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
