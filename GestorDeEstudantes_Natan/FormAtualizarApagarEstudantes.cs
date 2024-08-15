@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -123,6 +124,11 @@ namespace GestorDeEstudantes_Natan
                     //Limpa as caixas de texto
                     textBoxID.Text = "";
                     textBoxNome.Text = "";
+                    textBoxSobrenome.Text = "";
+                    textBoxTelefone.Text = "";
+                    textBoxEndereco.Text = "";
+                    dateTimePickerNascimento.Value = DateTime.Now;
+                    pictureBoxUsuario.Image = null;
                 }
                 else
                 {
@@ -130,5 +136,17 @@ namespace GestorDeEstudantes_Natan
                 }
             }
         }
+
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+            //Busca estudante pela ID.
+            //Salva a ID convertida para inteira.
+            int id = Convert.ToInt32(textBoxID.Text);
+
+            MeuBancoDeDados meuBancoDeDados = new MeuBancoDeDados();
+
+            MySqlCommand command = new MySqlCommand("SELECT `id`, `nome`, `sobrenome`, `nascimento`, `genero`, `telefone`, `endereco`, `foto` FROM `estudantes` WHERE `id`=" +id, meuBancoDeDados.getConexao);
+        }
+
     }
 } 
