@@ -146,6 +146,32 @@ namespace GestorDeEstudantes_Natan
             MeuBancoDeDados meuBancoDeDados = new MeuBancoDeDados();
 
             MySqlCommand command = new MySqlCommand("SELECT `id`, `nome`, `sobrenome`, `nascimento`, `genero`, `telefone`, `endereco`, `foto` FROM `estudantes` WHERE `id`=" +id, meuBancoDeDados.getConexao);
+
+            DataTable tabela = estudante.pegarEstudantes(command);
+
+            if(tabela.Rows.Count > 0 )
+            {
+                textBoxNome.Text = tabela.Rows[0]["nome"].ToString();
+                textBoxSobrenome.Text = tabela.Rows[0]["sobrenome"].ToString();
+                dateTimePickerNascimento.Value = (DateTime) tabela.Rows[0]["nascimento"];
+                if (tabela.Rows[0]["genero"].ToString() == "Feminino")
+                {
+                    radioButtonFem.Checked = true;
+                }
+                else
+                {
+                    radioButtonMasc.Checked = true;
+                }
+                textBoxTelefone.Text = tabela.Rows[0]["telefone"].ToString();
+                textBoxEndereco.Text = tabela.Rows[0]["endereco"].ToString();
+                //A Foto
+                byte[] imagem = (byte[]) tabela.Rows[0]["foto"];
+                //Objeto intermediario entre a foto que esta na tabela
+                //e a foto que esta salva no banco de dados
+                MemoryStream fotoDoAluno = new MemoryStream(imagem);
+                pictureBoxUsuario.Image = Image.FromStream(fotoDoAluno);
+
+            }
         }
 
     }
