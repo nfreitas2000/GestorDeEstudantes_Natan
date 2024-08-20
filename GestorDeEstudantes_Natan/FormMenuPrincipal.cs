@@ -39,5 +39,10 @@ namespace GestorDeEstudantes_Natan
             FormAtualizarApagarEstudantes formAtualizarApagarEstudantes = new FormAtualizarApagarEstudantes();
             formAtualizarApagarEstudantes.Show();
         }
+
+        private void estatísticasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
