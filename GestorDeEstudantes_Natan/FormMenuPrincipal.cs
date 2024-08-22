@@ -42,7 +42,8 @@ namespace GestorDeEstudantes_Natan
 
         private void estatísticasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormEstatisticas formEstatisticas = new FormEstatisticas();
+            formEstatisticas.Show();
         }
     }
 }
